@@ -4,7 +4,7 @@ import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, Leaf, Zap, Shield, Award, ExternalLink } from "lucide-react";
-import { motion, useInView, useSpring, useTransform } from "framer-motion";
+import { motion, useInView, useSpring, useTransform, Variants } from "framer-motion";
 
 function AnimatedCounter({ value, className }: { value: number; className: string }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -24,12 +24,12 @@ function AnimatedCounter({ value, className }: { value: number; className: strin
   return <motion.span ref={ref} className={className}>{display}</motion.span>;
 }
 
-const fadeInUp = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
