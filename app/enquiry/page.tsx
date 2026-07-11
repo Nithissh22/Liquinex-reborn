@@ -13,7 +13,7 @@ const formSchema = z.object({
   email: z.string().email("Invalid email address"),
   enquiryType: z.string().min(1, "Please select an enquiry type"),
   description: z.string().min(10, "Description must be at least 10 characters"),
-  mayContact: z.boolean().default(false),
+  mayContact: z.boolean().optional(),
   phone: z.string().optional(),
   bestTimeToCall: z.string().optional(),
 });
