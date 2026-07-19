@@ -41,9 +41,23 @@ const projects = [
   {
     title: "Solvent Recovery System",
     subtitle: "Hot Process Fluids",
-    image: "/projects/solvent-recovery-system.jpg",
+    image: "/projects/solvent-recovery-system-new.png",
     desc: "Apart from water, our ceramic membrane ultrafiltration system is also used to clean hot process fluids. It is being used in the Aerospace industry to recover premium solvent and extend the life of the chemical. The precious solvent can then be reused for an extended period of time instead of being disposed. This in turns save the company significant amount of cost.",
     tags: ["Aerospace", "Solvent Recovery", "Extreme Conditions"]
+  },
+  {
+    title: "Ultrafiltration system for Australian Mining Industry",
+    subtitle: "Industrial Wastewater Recovery",
+    images: ["/projects/aus-mining-1.png", "/projects/aus-mining-2.png"],
+    desc: "Deployed within the highly regulated Australian mining sector, this ceramic membrane ultrafiltration system provides a robust solution for industrial wastewater recovery. Engineered to operate in harsh, remote environments, the system effectively filters out heavy metals and suspended solids from mining runoff and tailings without relying on chemical flocculants. This not only ensures compliance with strict environmental discharge standards but also allows for significant water recycling, drastically reducing the operation's freshwater footprint and disposal costs.",
+    tags: ["Mining", "Heavy Metal Removal", "Water Recycling"]
+  },
+  {
+    title: "Compact water purifying system",
+    subtitle: "Portable Ultrafiltration",
+    image: "/projects/compact-purifying-system.png",
+    desc: "Designed for ultimate portability and rapid deployment, our Compact Water Purifying System delivers high-quality drinking water from virtually any freshwater source. Using advanced silicon carbide ceramic ultrafiltration membranes, the system effectively removes bacteria, viruses, and suspended solids. Ideal for remote communities, disaster relief efforts, and off-grid locations, this robust system ensures a safe and reliable water supply in a highly compact form factor without the need for complex infrastructure.",
+    tags: ["Portable", "Off-Grid Access", "Disaster Relief"]
   }
 ];
 
@@ -197,7 +211,7 @@ export default function ProjectsPage() {
                   src={`/partners/partner-${i + 1}.png`}
                   alt={`Partner ${i + 1}`}
                   fill
-                  className="object-contain p-4 filter grayscale group-hover/logo:grayscale-0 transition-all duration-500 relative z-10"
+                  className="object-contain p-4 transition-all duration-500 relative z-10"
                 />
               </motion.div>
             ))}
@@ -240,8 +254,18 @@ export default function ProjectsPage() {
                         <div className="absolute top-4 left-4 bg-emerald-500/90 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-md">After</div>
                       </div>
                     </div>
+                  ) : project.images ? (
+                    <div className="relative flex gap-4 h-full">
+                      {/* @ts-ignore */}
+                      {project.images.map((imgSrc, i) => (
+                        <div key={i} className="relative w-1/2 aspect-[3/4] rounded-xl overflow-hidden shadow-xl group/multi">
+                          <Image src={imgSrc} alt={`${project.title} - Image ${i + 1}`} fill className="object-cover transition-transform duration-700 group-hover/multi:scale-105" />
+                        </div>
+                      ))}
+                    </div>
                   ) : (
                     <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-2xl">
+                      {/* @ts-ignore */}
                       <Image
                         src={project.image}
                         alt={project.title}

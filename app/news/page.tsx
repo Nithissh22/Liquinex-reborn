@@ -26,13 +26,13 @@ export default function NewsPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/news/global-recognition-bg.jpg" 
-            alt="Global Recognition Background"
+            src="/news/hero-bg.png" 
+            alt="News and Media Background"
             fill
-            className="object-cover opacity-50"
+            className="object-cover object-top opacity-20 mix-blend-luminosity"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/60 to-slate-900" />
+          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-sky-900/40 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
         </div> 
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -225,6 +225,49 @@ export default function NewsPage() {
                 </div>
               </div>
             </motion.div>
+
+            {/* Water & Wastewater Asia Magazine Feature */}
+            <motion.div 
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8 }}
+              className="relative rounded-[3rem] bg-white text-slate-800 p-8 md:p-14 overflow-hidden shadow-2xl group hover:shadow-sky-900/50 transition-all duration-500 flex flex-col md:flex-row gap-10 items-center"
+            >
+              <div className="absolute top-0 right-0 w-96 h-96 bg-sky-50 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 group-hover:bg-sky-100 transition-colors duration-700 pointer-events-none" />
+              
+              <div className="relative z-10 flex-1">
+                <div className="flex flex-wrap gap-4 items-center mb-6">
+                  <span className="px-4 py-2 rounded-full bg-sky-600 text-white text-xs font-bold tracking-widest uppercase shadow-md">Sep / Oct 2022</span>
+                  <span className="text-sky-700 font-bold text-sm tracking-widest uppercase bg-sky-50 px-4 py-2 rounded-full border border-sky-100">Hotseat Article</span>
+                </div>
+                <h3 className="text-3xl md:text-4xl font-heading font-extrabold text-slate-900 mb-6 tracking-tight group-hover:text-sky-700 transition-colors duration-500">Liquinex's Solutions Pack a Punch</h3>
+                <div className="space-y-4 text-slate-600 font-light leading-relaxed text-lg">
+                  <p>
+                    Featured in the prestigious <strong className="text-sky-800 font-semibold">Water & Wastewater Asia</strong> magazine, Liquinex has been highlighted for its remarkable contributions to the global water industry. The "Hotseat" editorial dives deep into how our compact, robust water purification technologies are making waves across the region.
+                  </p>
+                  <p>
+                    The article explores the engineering brilliance behind our systems, which are specifically designed to pack an industrial-grade punch in a highly portable and compact form factor. It outlines our commitment to sustainability and our ongoing mission to provide clean drinking water to remote and disaster-stricken communities without compromising on efficiency.
+                  </p>
+                </div>
+                <div className="mt-8">
+                  <a href="https://www.yumpu.com/en/document/read/67214289/water-wastewater-asia-september-october-2022/49" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sky-900 font-bold bg-white border-2 border-sky-100 px-6 py-3 rounded-full hover:bg-sky-50 hover:border-sky-200 transition-all duration-300 shadow-sm hover:shadow-md">
+                    <ExternalLink className="w-5 h-5 mr-3 text-sky-600" /> Read Full Article
+                  </a>
+                </div>
+              </div>
+
+              <div className="relative z-10 w-full md:w-1/3 shrink-0">
+                <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden border-4 border-slate-100 shadow-xl group-hover:border-sky-200 transition-colors duration-500 bg-slate-50">
+                  <Image 
+                    src="/news/newsnmedia.png" 
+                    alt="Water & Wastewater Asia Magazine Feature"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -252,7 +295,6 @@ export default function NewsPage() {
             <div className="columns-1 md:columns-2 lg:columns-3 gap-8 pt-8">
               {[
                 { date: "29 Mar 2022", tag: "Press Release", title: "Clean, safe water from every tap (purefize.com)", link: "https://www.purefize.com/news-and-documents/2022/press-release-29-march-2022/" },
-                { date: "Sep/Oct 2022", tag: "Article", title: "YUMPU HOTSEAT ARTICLE: Liquinex's Solutions Pack a Punch", link: "https://www.yumpu.com/en/document/read/67214289/water-wastewater-asia-september-october-2022/49" },
                 { date: "15 Feb 2023", tag: "Press Release", title: "LiqTech Enters Distribution Agreement with Liquinex in Singapore", link: "https://liqtech.com/investor/financial/liqtech-enters-distribution-agreement-with-liquinex-in-singapore/" },
                 { date: "Ongoing", tag: "Feature", title: "WATER CHAMPION: Make Every Drop Count (pub.gov.sg)", link: "https://makeeverydropcount.pub.gov.sg/champions-of-water-sustainability/" },
                 { date: "16 Jun 2023", tag: "Announcement", title: "Liquinex partners with Kay Holdings Sdn Bhd in Kualar Lumpur to launch products in Malaysia.", link: "https://www.linkedin.com/posts/liquinex_liquinex-kayholdings-water-innovation-activity-7075389028082987008-tJ9V" },

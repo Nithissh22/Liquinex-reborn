@@ -31,7 +31,7 @@ export default function RootLayout({
       lang="en"
       className={`${plusJakarta.variable} ${inter.variable} scroll-smooth`}
     >
-      <body className="font-sans min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden">
+      <body className="font-sans antialiased min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden">
         <GlobalLoader />
         <Navbar />
         <main className="flex-1">{children}</main>

@@ -87,9 +87,15 @@ export default function EnquiryPage() {
                 </div>
                 <div>
                   <h3 className="font-heading font-semibold text-lg mb-1">Email</h3>
-                  <p className="text-neutral">
+                  <p className="text-neutral flex flex-col gap-2">
                     <a href="mailto:lqxgroup@liquinex.com" className="hover:text-accent transition-colors">
                       lqxgroup@liquinex.com
+                    </a>
+                    <a href="mailto:Bashir@liquinex.com" className="hover:text-accent transition-colors">
+                      Bashir@liquinex.com
+                    </a>
+                    <a href="mailto:Riaz@liquinex.com" className="hover:text-accent transition-colors">
+                      Riaz@liquinex.com
                     </a>
                   </p>
                 </div>

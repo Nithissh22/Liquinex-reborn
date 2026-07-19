@@ -5,26 +5,15 @@ import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { LogoMarquee } from "@/components/ui/logo-marquee";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { VideoCarousel } from "@/components/ui/video-carousel";
+import { HeroCarousel } from "@/components/ui/hero-carousel";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-primary">
-        {/* Placeholder for Hero Video/Image */}
-        <div className="absolute inset-0 z-0">
-          <Image 
-            src="/about/hero-bg.jpg" 
-            alt="Liquinex clean water technology facility"
-            fill
-            className="object-cover opacity-80 mix-blend-overlay"
-            priority
-          />
-          {/* Dark overlay to ensure white text is perfectly legible */}
-          <div className="absolute inset-0 bg-slate-900/60" />
-          {/* Bottom gradient to smoothly blend into the next section */}
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-        </div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary">
+        <HeroCarousel />
 
         <div className="container relative z-10 mx-auto px-4 text-center mt-12">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight">
@@ -53,7 +42,7 @@ export default function Home() {
               "Municipal Systems",
               "Oil & Gas Produced Water"
             ].map((category) => (
-              <div key={category} className="bg-primary/50 backdrop-blur-sm border border-primary-light/50 px-6 py-3 rounded-full text-sm font-medium text-white hover:bg-accent transition-colors cursor-pointer">
+              <div key={category} className="bg-white/90 hover:bg-white backdrop-blur-md border border-slate-200/50 px-6 py-3 rounded-full text-sm font-semibold text-slate-800 hover:text-sky-700 transition-all duration-300 cursor-pointer shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(2,132,199,0.2)] hover:-translate-y-1">
                 {category}
               </div>
             ))}
@@ -122,7 +111,7 @@ export default function Home() {
               {/* Image 2: Rural Suitcase */}
               <div className="absolute bottom-0 left-0 w-[60%] h-[55%] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white z-20 group hover:z-30">
                 <Image 
-                  src="/about/partners-2.jpg"
+                  src="/about/partners-2.png"
                   alt="Compact rural water purification"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -148,16 +137,16 @@ export default function Home() {
             className="text-white [&>p]:text-neutral-light"
           />
           
-          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-primary-light shadow-2xl aspect-video bg-black relative">
-            <video 
-              src="/home-video.mp4" 
-              className="absolute inset-0 w-full h-full object-cover"
-              controls
-              playsInline
-              preload="metadata"
-            >
-              Your browser does not support the video tag.
-            </video>
+          <div className="max-w-4xl mx-auto">
+            <VideoCarousel 
+              videos={[
+                "/videos/video-1.mp4",
+                "/videos/video-2.mp4",
+                "/videos/video-3.mp4",
+                "/videos/video-4.mp4",
+                "/videos/video-5.mp4"
+              ]} 
+            />
           </div>
         </div>
       </section>

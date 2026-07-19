@@ -39,7 +39,7 @@ export function LogoMarquee({ className }: LogoMarqueeProps) {
               key={`partner-${index}`}
               className="flex items-center justify-center px-10 md:px-16"
             >
-              <div className="relative w-32 h-16 md:w-48 md:h-24 opacity-60 hover:opacity-100 hover:scale-110 grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer">
+              <div className="relative w-32 h-16 md:w-48 md:h-24 hover:scale-110 transition-all duration-500 cursor-pointer">
                 <Image
                   src={partner.logo}
                   alt={`Partner ${partner.id}`}

@@ -21,16 +21,12 @@ const staggerContainer: Variants = {
 const products = [
   {
     id: "mini-compact-water-purification",
-    name: "Mini / Standard Compact Water Purification System",
+    name: "Standard Compact Water Purification System",
     desc: "Our Compact Water Purification System (CWPS) is a lightweight, portable water treatment unit. It is designed to be easily deployed for emergency response and used in remote locations. The system uses ultrafiltration silicon carbide ceramic membrane technology capable of filtering sub-micron-size particles, including bacteria and viruses.",
     image: "/products/mini-compact.png", 
     variants: [
       {
-        name: "Mini System",
-        specs: { Dimension: "52 x 40 x 22 cm", "Flow Rate": "Up to 150 L/hr", Weight: "15 kg" }
-      },
-      {
-        name: "Standard System",
+        name: "Specifications",
         specs: { Dimension: "63 x 50 x 30 cm", "Flow Rate": "Up to 500 L/hr", Weight: "30 kg" }
       }
     ],
@@ -66,13 +62,13 @@ const products = [
   },
   {
     id: "seawater-reverse-osmosis",
-    name: "Compact Water Purification System - Seawater RO",
+    name: "Mini compact water purification system",
     desc: "Our Compact Seawater Suitcase RO System can handle seawater with high energy efficiency while achieving drinking water standards of <200mg/L TDS. It comes with a pre-filter to remove suspended solids and extend the lifespan of the RO membrane.",
-    image: "/products/seawater-ro.png",
+    image: "/products/shop.mini.png",
     variants: [
       {
         name: "Specifications",
-        specs: { Dimension: "78 x 52 x 40 cm", "Flow Rate": "Up to 750 L/day", Weight: "27.7 kg" }
+        specs: { Dimension: "52 x 40 x 22 cm", "Flow Rate": "Up to 150 L/hr", Weight: "15 kg" }
       }
     ],
     featuresTitle: "Features:",
@@ -190,13 +186,13 @@ export default function ShopPage() {
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900 min-h-[50vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/news/global-recognition-bg.jpg" 
+            src="/shop/hero-bg.png" 
             alt="Product Catalog Background"
             fill
-            className="object-cover opacity-30 mix-blend-luminosity"
+            className="object-cover opacity-20 mix-blend-luminosity"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/90 via-slate-900/80 to-slate-900" />
+          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-sky-900/40 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
         </div> 
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">

@@ -47,15 +47,12 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 z-50">
-          <div className="relative w-48 h-12">
+          <div className="relative w-56 h-16 md:w-64 md:h-20">
             <Image 
               src="/logo-v2.png" 
               alt="Liquinex Logo" 
               fill 
-              className={cn(
-                "object-contain transition-all duration-300",
-                !isScrolled && pathname === "/" ? "brightness-0 invert" : ""
-              )}
+              className="object-contain transition-all duration-300"
             />
           </div>
         </Link>

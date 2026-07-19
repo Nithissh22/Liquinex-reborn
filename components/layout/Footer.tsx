@@ -126,9 +126,17 @@ export function Footer() {
                 <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center shrink-0 group-hover:bg-primary/10 transition-colors">
                   <Mail className="w-5 h-5 text-accent" />
                 </div>
-                <a href="mailto:lqxgroup@liquinex.com" className="text-sm text-slate-600 font-medium hover:text-primary transition-colors">
-                  lqxgroup@liquinex.com
-                </a>
+                <div className="flex flex-col gap-1">
+                  <a href="mailto:lqxgroup@liquinex.com" className="text-sm text-slate-600 font-medium hover:text-primary transition-colors">
+                    lqxgroup@liquinex.com
+                  </a>
+                  <a href="mailto:Bashir@liquinex.com" className="text-sm text-slate-600 font-medium hover:text-primary transition-colors">
+                    Bashir@liquinex.com
+                  </a>
+                  <a href="mailto:Riaz@liquinex.com" className="text-sm text-slate-600 font-medium hover:text-primary transition-colors">
+                    Riaz@liquinex.com
+                  </a>
+                </div>
               </li>
             </ul>
           </div>
