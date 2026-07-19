@@ -399,7 +399,7 @@ export default function SolutionsPage() {
               <div className="flex flex-col gap-8">
                  <div className="w-full flex-1 rounded-[2rem] bg-white/5 border border-white/10 overflow-hidden relative min-h-[300px]">
                     <Image
-                      src="/solutions/waterwall-1.jpg"
+                      src="/solutions/waterwall-1-new.png"
                       alt="Waterwall installed in office environment"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-700"
@@ -407,7 +407,7 @@ export default function SolutionsPage() {
                  </div>
                  <div className="w-full flex-1 rounded-[2rem] bg-white/5 border border-white/10 overflow-hidden relative min-h-[300px]">
                     <Image
-                      src="/solutions/waterwall-2.jpg"
+                      src="/solutions/waterwall-2-new.png"
                       alt="Waterwall installed in kitchen environment"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-700"
