@@ -45,7 +45,7 @@ export default function EnquiryPage() {
     setTimeout(() => setIsSuccess(false), 5000);
   };
 
-  const inputClass = "flex h-12 w-full rounded-md border border-primary-light bg-primary/10 px-3 py-2 text-sm text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors";
+  const inputClass = "flex h-12 w-full rounded-md border border-white/20 bg-white/5 px-3 py-2 text-sm text-white ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors [&>option]:bg-zinc-900 [&>option]:text-white";
 
   return (
     <div className="flex flex-col min-h-screen pt-24 relative">
@@ -54,10 +54,10 @@ export default function EnquiryPage() {
           src="/contact-bg.png" 
           alt="Contact Background" 
           fill 
-          className="object-cover opacity-15" 
+          className="object-cover opacity-60" 
           priority
         />
-        <div className="absolute inset-0 bg-white/60 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
       </div>
       
       <section className="container mx-auto px-4 md:px-6 py-12 md:py-24 relative z-10">
@@ -65,41 +65,41 @@ export default function EnquiryPage() {
           
           {/* Contact Details */}
           <div>
-            <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">
               Get in Touch
             </h1>
-            <p className="text-lg text-neutral mb-12 max-w-md">
+            <p className="text-lg text-neutral-300 mb-12 max-w-md">
               Whether you're looking for an industrial wastewater solution or a compact purification system, our team is ready to assist.
             </p>
 
             <div className="space-y-8">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0 border border-primary-light/30">
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/20">
                   <MapPin className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h3 className="font-heading font-semibold text-lg mb-1">Our Office</h3>
-                  <p className="text-neutral">2021 Bukit Batok St 23, #04-224<br/>Bukit Batok Industrial Estate Park A<br/>Singapore 659526</p>
+                  <h3 className="font-heading font-semibold text-lg mb-1 text-white">Our Office</h3>
+                  <p className="text-neutral-300">2021 Bukit Batok St 23, #04-224<br/>Bukit Batok Industrial Estate Park A<br/>Singapore 659526</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0 border border-primary-light/30">
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/20">
                   <Phone className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h3 className="font-heading font-semibold text-lg mb-1">Phone</h3>
-                  <p className="text-neutral">6909 3588<br/><span className="text-sm">Weekdays 8:30am - 5:30pm</span></p>
+                  <h3 className="font-heading font-semibold text-lg mb-1 text-white">Phone</h3>
+                  <p className="text-neutral-300">6909 3588<br/><span className="text-sm">Weekdays 8:30am - 5:30pm</span></p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0 border border-primary-light/30">
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/20">
                   <Mail className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h3 className="font-heading font-semibold text-lg mb-1">Email</h3>
-                  <p className="text-neutral flex flex-col gap-2">
+                  <h3 className="font-heading font-semibold text-lg mb-1 text-white">Email</h3>
+                  <p className="text-neutral-300 flex flex-col gap-2">
                     <a href="mailto:Bashir@liquinex.com" className="hover:text-accent transition-colors">
                       Bashir@liquinex.com
                     </a>
@@ -113,13 +113,13 @@ export default function EnquiryPage() {
           </div>
 
           {/* Form */}
-          <Card className="bg-primary/5">
-            <CardContent className="p-8">
+          <Card className="bg-black/40 border-white/10 backdrop-blur-md">
+            <CardContent className="p-8 text-white">
               {isSuccess ? (
                 <div className="flex flex-col items-center justify-center text-center py-16 space-y-4">
                   <CheckCircle2 className="w-16 h-16 text-accent" />
                   <h3 className="font-heading text-2xl font-bold">Message Sent!</h3>
-                  <p className="text-neutral">Thank you for your enquiry. Our team will get back to you shortly.</p>
+                  <p className="text-neutral-300">Thank you for your enquiry. Our team will get back to you shortly.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -161,13 +161,13 @@ export default function EnquiryPage() {
                     {errors.description && <p className="text-red-400 text-xs">{errors.description.message}</p>}
                   </div>
 
-                  <div className="space-y-4 pt-4 border-t border-primary-light/20">
+                  <div className="space-y-4 pt-4 border-t border-white/10">
                     <div className="flex items-center space-x-3">
                       <input 
                         type="checkbox" 
                         {...register("mayContact")} 
                         id="mayContact"
-                        className="w-5 h-5 rounded border-primary-light text-accent focus:ring-accent"
+                        className="w-5 h-5 rounded border-white/20 bg-white/10 text-accent focus:ring-accent"
                       />
                       <label htmlFor="mayContact" className="text-sm font-medium cursor-pointer">May We Contact You?</label>
                     </div>
