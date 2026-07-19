@@ -277,8 +277,8 @@ export default function SolutionsPage() {
               <div className="absolute inset-0 bg-gradient-to-tr from-slate-100 to-slate-50 rounded-[3rem] transform rotate-3 scale-105 border border-slate-200" />
               <div className="relative w-full h-full rounded-[3rem] overflow-hidden shadow-2xl border border-slate-200 group">
                 <Image
-                  src="/solutions/industrial-system.png"
-                  alt="Liquinex 15D Industrial Water Treatment System"
+                  src="/solutions/industrial-system-new.png"
+                  alt="Industrial Water Treatment System"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
