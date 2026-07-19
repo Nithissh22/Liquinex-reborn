@@ -23,7 +23,7 @@ const products = [
     id: "mini-compact-water-purification",
     name: "Standard Compact Water Purification System",
     desc: "Our Compact Water Purification System (CWPS) is a lightweight, portable water treatment unit. It is designed to be easily deployed for emergency response and used in remote locations. The system uses ultrafiltration silicon carbide ceramic membrane technology capable of filtering sub-micron-size particles, including bacteria and viruses.",
-    image: "/products/mini-compact.png", 
+    image: "/products/standard-compact-new.png", 
     variants: [
       {
         name: "Specifications",
