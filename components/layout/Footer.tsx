@@ -127,9 +127,6 @@ export function Footer() {
                   <Mail className="w-5 h-5 text-accent" />
                 </div>
                 <div className="flex flex-col gap-1">
-                  <a href="mailto:lqxgroup@liquinex.com" className="text-sm text-slate-600 font-medium hover:text-primary transition-colors">
-                    lqxgroup@liquinex.com
-                  </a>
                   <a href="mailto:Bashir@liquinex.com" className="text-sm text-slate-600 font-medium hover:text-primary transition-colors">
                     Bashir@liquinex.com
                   </a>
