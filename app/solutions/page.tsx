@@ -474,7 +474,7 @@ export default function SolutionsPage() {
                 <p className="text-slate-600 font-light mt-4">Filtration system for Algae Extraction.</p>
               </div>
               <div className="mt-6 flex-1 w-full rounded-xl overflow-hidden relative border border-slate-100 shadow-inner min-h-[200px]">
-                <Image src="/solutions/algae.png" alt="Algae Extraction System" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/solutions/algae-new.png" alt="Algae Extraction System" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
             </div>
 
