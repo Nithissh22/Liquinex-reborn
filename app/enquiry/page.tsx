@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { MapPin, Phone, Mail, CheckCircle2 } from "lucide-react";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -48,19 +47,8 @@ export default function EnquiryPage() {
   const inputClass = "flex h-12 w-full rounded-md border border-primary-light bg-primary/10 px-3 py-2 text-sm text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors";
 
   return (
-    <div className="flex flex-col min-h-screen pt-24 relative">
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <Image 
-          src="/contact-bg.png" 
-          alt="Contact Background" 
-          fill 
-          className="object-cover opacity-15" 
-          priority
-        />
-        <div className="absolute inset-0 bg-white/60 backdrop-blur-[2px]" />
-      </div>
-      
-      <section className="container mx-auto px-4 md:px-6 py-12 md:py-24 relative z-10">
+    <div className="flex flex-col min-h-screen pt-24 bg-background">
+      <section className="container mx-auto px-4 md:px-6 py-12 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           
           {/* Contact Details */}
